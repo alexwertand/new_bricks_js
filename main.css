@@ -1,0 +1,33 @@
+.wrap {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.grid-section {
+  margin: 0 auto;
+}
+
+.box {
+  display: inline-block;
+  box-shadow: 0px 1px 9px 0px;
+  outline: 4px solid white;
+  overflow: hidden;
+}
+
+.box:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color:rgba(199, 199, 199, 0.5);
+  transition: width 1s cubic-bezier(1, 0.35, 0.43, 1.23), height 1s cubic-bezier(1, 0.35, 0.43, 1.23);
+}
+
+.box:hover:after {
+  width: 550px;
+  height: 550px;
+}
